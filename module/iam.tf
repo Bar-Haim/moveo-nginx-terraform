@@ -1,5 +1,6 @@
 resource "aws_iam_role" "nginx_instance_role" {
-  name = "nginx-instance-role-v2"
+  name = "nginx-instance-role-bar"
+
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

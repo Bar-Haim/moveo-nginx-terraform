@@ -27,7 +27,7 @@ module "moveo_nginx" {
   nat_name              = "bar-nat-gateway"
   sg_name               = "nginx-sg"
   vpc_name              = "bar-vpc-moveo-project"
-  tg_name               = "nginx-tg"
+  tg_name               = "nginx-tg-bar"
   user_data             = file("${path.module}/module/user_data.sh")
   ecr_image_uri         = "267414915135.dkr.ecr.us-east-1.amazonaws.com/nginx-moveo:latest"
   private_key           = file("studykey.pem")
