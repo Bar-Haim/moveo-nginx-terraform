@@ -1,6 +1,18 @@
-module "moveo_nginx" {
-  source = "./module"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 
+provider "aws" {
+  region = "us-east-1"
+}
+
+module "moveo_nginx" {
+  source                = "./module"
   vpc_cidr              = "10.0.0.0/16"
   public_subnet_cidr    = "10.0.1.0/24"
   public_subnet_cidr_b  = "10.0.3.0/24"
@@ -16,4 +28,5 @@ module "moveo_nginx" {
   tg_name               = "nginx-tg"
   user_data             = file("${path.module}/module/user_data.sh")
   ecr_image_uri         = "267414915135.dkr.ecr.us-east-1.amazonaws.com/nginx-moveo:latest"
+  private_key           = var.private_key
 }

@@ -70,3 +70,9 @@ variable "user_data" {
 variable "public_subnet_cidr_b" {
   type = string
 }
+
+variable "private_key" {
+  description = "The private key for SSH"
+  type        = string
+  sensitive   = true
+}

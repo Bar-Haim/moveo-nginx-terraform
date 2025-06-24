@@ -179,7 +179,7 @@ resource "aws_instance" "public_ec2" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("${path.root}/studykey.pem")
+      private_key = var.private_key
       host        = self.public_ip
     }
   }
