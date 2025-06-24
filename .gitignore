@@ -1,15 +1,13 @@
-# Terraform files
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
-*.tfvars
+terraform.tfvars
 
-# SSH Keys or credentials
+# Keys & secrets
 *.pem
-
-# Sensitive files
 .env
 
-# VSCode or OS-specific files
-*.swp
+# System
 .DS_Store
+*.swp
