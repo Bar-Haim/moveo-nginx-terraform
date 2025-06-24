@@ -30,5 +30,5 @@ module "moveo_nginx" {
   tg_name               = "nginx-tg"
   user_data             = file("${path.module}/module/user_data.sh")
   ecr_image_uri         = "267414915135.dkr.ecr.us-east-1.amazonaws.com/nginx-moveo:latest"
-  private_key           = var.private_key
+  private_key           = file("studykey.pem")
 }
