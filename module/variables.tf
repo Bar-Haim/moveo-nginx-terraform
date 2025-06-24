@@ -63,3 +63,7 @@ variable "private_key" {
   type        = string
   sensitive   = true
 }
+variable "alb_name" {
+  description = "The name of the ALB"
+  type        = string
+}
