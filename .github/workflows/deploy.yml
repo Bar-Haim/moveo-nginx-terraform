@@ -23,12 +23,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Export private key to studykey.pem
-        run: |
-          echo "$PRIVATE_KEY" > studykey.pem
-          chmod 600 studykey.pem
+      - name: Export private key to file
+        run: echo "$PRIVATE_KEY" > studykey.pem && chmod 400 studykey.pem
         env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+    PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+
 
       - name: Terraform Init
         run: terraform init
