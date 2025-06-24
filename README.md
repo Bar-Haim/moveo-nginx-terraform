@@ -4,4 +4,4 @@ provider "aws" {
   region = "us-east-1"
 }
 
-2. 1 
+2. 12 
