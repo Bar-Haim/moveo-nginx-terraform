@@ -1,0 +1,15 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# SSH Keys or credentials
+*.pem
+
+# Sensitive files
+.env
+
+# VSCode or OS-specific files
+*.swp
+.DS_Store
