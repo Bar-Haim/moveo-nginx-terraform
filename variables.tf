@@ -30,9 +30,6 @@ variable "instance_name" {
   type = string
 }
 
-variable "alb_name" {
-  type = string
-}
 
 variable "nat_name" {
   type = string
