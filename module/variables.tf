@@ -2,15 +2,7 @@ variable "vpc_cidr" {
   type = string
 }
 
-variable "public_subnet_cidr" {
-  type = string
-}
-
-variable "public_subnet_cidr_b" {
-  type = string
-}
-
-variable "private_subnet_cidr" {
+variable "private_subnet_moveo" {
   type = string
 }
 
@@ -54,12 +46,21 @@ variable "ecr_image_uri" {
   type = string
 }
 
-variable "user_data" {
-  type = string
-}
+# variable "user_data" {
+#   type = string
+# }
 
 variable "private_key" {
   description = "The private key used to connect to EC2 for provisioner"
   type        = string
   sensitive   = true
+}
+variable "public_subnet_a" {
+  type        = string
+  description = "CIDR block for public subnet in AZ A"
+}
+
+variable "public_subnet_b" {
+  type        = string
+  description = "CIDR block for public subnet in AZ B"
 }
